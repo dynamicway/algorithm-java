@@ -8,7 +8,7 @@ public class UsefulSquare {
             cnt++;
             if (i == 1) continue;
             if (Math.floor(i * tan) == i * tan) continue;
-            if (Math.floor((i-1)*tan) == (i-1)*tan) continue;
+            if (Math.floor((i - 1) * tan) == (i - 1) * tan) continue;
             if (Math.ceil((i - 1) * tan) < i * tan) {
                 cnt++;
             }

@@ -25,6 +25,7 @@ public class NewID {
         list.stream().parallel().forEachOrdered(sb::append);
         return sb.toString();
     }
+
     public LinkedList<Character> getList(char[] arr) {
         LinkedList<Character> list = new LinkedList<>();
         for (char c : arr) {
@@ -33,15 +34,16 @@ public class NewID {
         }
         return list;
     }
+
     public boolean isCheck(char ch) {
         return ('a' <= ch && 'z' >= ch) || ('0' <= ch && '9' >= ch) || '-' == ch || '_' == ch || '.' == ch;
     }
 
     public void distinctDot(LinkedList<Character> list) {
-        for (int i = 0;  i < list.size()-1; i++) {
+        for (int i = 0; i < list.size() - 1; i++) {
             if (list.get(i) == '.' && (list.get(i) == list.get(i + 1))) {
-               list.remove(i);
-               i--;
+                list.remove(i);
+                i--;
             }
         }
         if (list.getFirst() == '.')
